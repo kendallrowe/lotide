@@ -1,22 +1,3 @@
-// FUNCTION IMPLEMENTATION
-const assertEqual = function(actual, expected) {
-  const match = actual === expected;
-  if (match === true) {
-    return `😻😻😻 Assertion Passed: ${actual} === ` + expected;
-  } else {
-    return `🙈🙈🙈 Assertion Failed: ${actual} !== ` + expected;
-  }
-};
-
-const findKeyByValue = function(objectToSearch, value) {
-  for (const key in objectToSearch) {
-    if (objectToSearch[key] === value) {
-      return key;
-    }
-  }
-  return undefined;
-};
-
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
@@ -31,24 +12,42 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
+
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
-  for (const key1 in object1) {
+  // Before looping, check that both objects are the same length
+  if (Object.keys(object1).length !== Object.keys(object2).length) {
+    return false;
+  }
+  for (const key in object1) {
     // Check if the the current key exists in object 2, if not return false
-    if (!object2[key1]) {
+    if (!object2[key]) {
       return false;
       // If the key does exist, check whether BOTH values are arrays, apply eqArrays if so
-    } else if (Array.isArray(object1[key1] && Array.isArray(object2[key1])) {
-
-    } else if ()
+    } else if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+      return eqArrays(object1[key], object2[key]);
+      // If only one of the values are an array, they will not be a match so return falst
+    } else if (Array.isArray(object1[key]) || Array.isArray(object2[key])) {
+      return false;
+    } else if (object1[key] !== object2[key]) {
+      return false;
+    }
   }
+  return true;
 };
 
 // Test Code
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
-eqObjects(ab, ba); // => true
+console.log(eqObjects(ab, ba)); // => true
 
 const abc = { a: "1", b: "2", c: "3" };
-eqObjects(ab, abc); // => false
+console.log(eqObjects(ab, abc)); // => false
+
+const cd = { c: "1", d: ["2", 3] };
+const dc = { d: ["2", 3], c: "1" };
+console.log(eqObjects(cd, dc)); // => true
+
+const cd2 = { c: "1", d: ["2", 3, 4] };
+console.log(eqObjects(cd, cd2)); // => false
