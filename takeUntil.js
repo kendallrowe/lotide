@@ -1,5 +1,10 @@
 const takeUntil = function(arrayToCheck, callback) {
-  return [];
+  arrayToCheck.forEach(function(item, index) {
+    if (callback(item)) {
+      arrayToCheck = arrayToCheck.slice(0, index);
+    }
+  });
+  return arrayToCheck;
 };
 
 // Test Output
@@ -34,5 +39,5 @@ console.log(assertArraysEqual(results1, [ 1, 2, 5, 7, 2 ]));
 console.log('---');
 
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data1, x => x === ',');
+const results2 = takeUntil(data2, x => x === ',');
 console.log(assertArraysEqual(results2,[ 'I\'ve', 'been', 'to', 'Hollywood' ]));
