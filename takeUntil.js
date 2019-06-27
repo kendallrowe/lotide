@@ -2,6 +2,7 @@ const takeUntil = function(arrayToCheck, callback) {
   arrayToCheck.forEach(function(item, index) {
     if (callback(item)) {
       arrayToCheck = arrayToCheck.slice(0, index);
+      return ;
     }
   });
   return arrayToCheck;
