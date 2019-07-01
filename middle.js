@@ -1,27 +1,3 @@
-// Assert Equals function from Previous example
-const assertArraysEqual = function(arr1, arr2) {
-  const match = eqArrays(arr1, arr2);
-  if (match === true) {
-    return `😻😻😻 Assertion Passed: ${arr1} === ` + arr2;
-  } else {
-    return `🙈🙈🙈 Assertion Failed: ${arr1} !== ` + arr2;
-  }
-};
-
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
 const middle = function(inputArray) {
   let returnArray = [];
 
@@ -39,12 +15,4 @@ const middle = function(inputArray) {
   return returnArray;
 };
 
-// TEST CODE
-console.log(assertArraysEqual(middle([1]), []));
-console.log(assertArraysEqual(middle([1, 2]), []));
-
-console.log(assertArraysEqual(middle([1, 2, 3]), [2]));
-console.log(assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]));
-
-console.log(assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]));
-console.log(assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]));
+module.exports = middle;
