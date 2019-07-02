@@ -1,27 +1,4 @@
-// Assert Equals function from Previous example
-const assertArraysEqual = function(arr1, arr2) {
-  const match = eqArrays(arr1, arr2);
-  if (match === true) {
-    return `😻😻😻 Assertion Passed: ${arr1} === ` + arr2;
-  } else {
-    return `🙈🙈🙈 Assertion Failed: ${arr1} !== ` + arr2;
-  }
-};
-
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-
-  return true;
-};
-
+// Returns a single array containing all the values in order of appearance of a given nested array. (Creates as a new array).
 const flatten = function(nestedArray) {
   let flattenedArray = [];
 
@@ -40,4 +17,4 @@ const flatten = function(nestedArray) {
   return flattenedArray;
 };
 
-console.log(assertArraysEqual(flatten([1, 2, [3, 4], 5, [6]]),[1, 2, 3, 4, 5, 6]));
+module.exports = flatten;

@@ -1,3 +1,4 @@
+// Returns a boolean of whether two given arrays are an exact match (including nested arrays).
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;

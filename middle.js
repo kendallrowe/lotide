@@ -1,3 +1,4 @@
+// Returns an array of the middle element if given an odd length array. Returns the middle two elements as an array for even length. Returns undefined for empty array.
 const middle = function(inputArray) {
   let returnArray = [];
 

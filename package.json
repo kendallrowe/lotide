@@ -1,0 +1,28 @@
+{
+  "name": "@kendall.rowe/lotide",
+  "version": "1.0.0",
+  "description": "A mini version of the Lodash library made as a project in week one at Lighthouse Labs.",
+  "main": "assertArraysEquals.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^6.1.4"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kendallrowe/lotide.git"
+  },
+  "author": "kendall.rowe312@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kendallrowe/lotide/issues"
+  },
+  "homepage": "https://github.com/kendallrowe/lotide#readme"
+}
