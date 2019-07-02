@@ -1,4 +1,4 @@
-const countLetters = function(inputString) {
+const countLetter = function(inputString) {
   const letterCount = {};
 
   for (const letter of inputString) {
@@ -11,4 +11,4 @@ const countLetters = function(inputString) {
   return letterCount;
 };
 
-console.log(countLetters('lighthouse in the house'));
+module.exports = countLetter;
