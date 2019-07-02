@@ -23,9 +23,9 @@ const eqObjects = function(object1, object2) {
       // Check if both values are objects
     } else if (typeof(object1[key]) === "object" && typeof(object2[key]) === "object") {
       // If both values are objects, check that they are of same amount of keys and if so, recursion
-        if (!eqObjects(object1[key], object2[key])) {
-          return false;
-        }
+      if (!eqObjects(object1[key], object2[key])) {
+        return false;
+      }
     } else if (typeof(object1[key]) === "object" || typeof(object2[key]) === "object") {
       return false;
     } else if (object1[key] !== object2[key]) {

@@ -7,6 +7,6 @@ describe("#head", () => {
   });
 
   it("returns '5' for ['5']", () => {
-    assert.strictEqual(lotide.head(['5']), '5'); 
+    assert.strictEqual(lotide.head(['5']), '5');
   });
 });
