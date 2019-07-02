@@ -15,7 +15,7 @@ describe("#letterPositions", () => {
       e: [ 9, 16, 22 ],
       n: [ 12 ] };
     
-    assert.deepEqual(lotide.letterPositions(inputString), expected)
+    assert.deepEqual(lotide.letterPositions(inputString), expected);
   });
 
 });

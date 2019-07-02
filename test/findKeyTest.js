@@ -13,7 +13,7 @@ describe("#findKey", () => {
     };
     const searchTermCallback = x => x.stars === 2;
     const expected = "noma";
-    assert.strictEqual(lotide.findKey(searchObject, searchTermCallback), expected)
+    assert.strictEqual(lotide.findKey(searchObject, searchTermCallback), expected);
   });
 
   it("returns returns undefined when given non-existent value return for callback", () => {
@@ -27,7 +27,7 @@ describe("#findKey", () => {
     };
     const searchTermCallback = x => x.stars === 5;
     const expected = undefined;
-    assert.strictEqual(lotide.findKey(searchObject, searchTermCallback), expected)
+    assert.strictEqual(lotide.findKey(searchObject, searchTermCallback), expected);
   });
 
 });

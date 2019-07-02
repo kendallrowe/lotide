@@ -14,10 +14,10 @@ describe("#countOnly", () => {
       "Fang",
       "Joe"
     ];
-    const searchObject = { "Jason": true, "Karima": true, "Fang": true }
+    const searchObject = { "Jason": true, "Karima": true, "Fang": true };
     const expected = 1;
     const result = lotide.countOnly(firstNames, searchObject);
-    assert.strictEqual(result["Jason"], expected)
+    assert.strictEqual(result["Jason"], expected);
   });
 
   it("returns returns undefined if name never appears in object", () => {
@@ -32,10 +32,10 @@ describe("#countOnly", () => {
       "Fang",
       "Joe"
     ];
-    const searchObject = { "Jason": true, "Karima": true, "Fang": true }
+    const searchObject = { "Jason": true, "Karima": true, "Fang": true };
     const expected = undefined;
     const result = lotide.countOnly(firstNames, searchObject);
-    assert.strictEqual(result["Karima"], expected)
+    assert.strictEqual(result["Karima"], expected);
   });
 
 
@@ -51,10 +51,10 @@ describe("#countOnly", () => {
       "Fang",
       "Joe"
     ];
-    const searchObject = { "Jason": true, "Karima": true, "Fang": true }
+    const searchObject = { "Jason": true, "Karima": true, "Fang": true };
     const expected = 2;
     const result = lotide.countOnly(firstNames, searchObject);
-    assert.strictEqual(result["Fang"], expected)
+    assert.strictEqual(result["Fang"], expected);
   });
 
 });
