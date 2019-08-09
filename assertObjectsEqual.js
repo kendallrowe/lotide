@@ -1,7 +1,6 @@
 const eqObjects = require("./eqObjects");
 
-// Assert Objects Equals function to return text if objects are a match
-// FUNCTION IMPLEMENTATION
+// Returns to console whether two objects are a strict match (including nested arrays and objects.).
 const assertObjectsEqual = function(actual, expected) {
   const inspect = require('util').inspect;
   const match = eqObjects(actual, expected);

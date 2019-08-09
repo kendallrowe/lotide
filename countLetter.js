@@ -1,3 +1,4 @@
+// Returns an object with count of all letters and how many times each occurs in a given input string.
 const countLetter = function(inputString) {
   const letterCount = {};
 
