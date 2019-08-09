@@ -1,6 +1,10 @@
 {
   "name": "@kendall.rowe/lotide",
+<<<<<<< HEAD
   "version": "1.0.1",
+=======
+  "version": "1.0.0",
+>>>>>>> 5959e7f1e3aabb24908ccef44bbaf1ab6f64999d
   "description": "A mini version of the Lodash library made as a project in week one at Lighthouse Labs.",
   "main": "assertArraysEquals.js",
   "directories": {
